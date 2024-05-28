@@ -1,0 +1,190 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\setlength{\footskip}{4.08003pt}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Use the libertine package for small caps support
+\usepackage{libertine}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge Rakesh Kumar} \\ \vspace{1pt}
+    \small +91-8209211601 $|$ \href{mailto:rakesh.kumar.132457@gmail.com}{\underline{rakesh.kumar.132457@gmail.com}} $|$
+    \href{https://linkedin.com/in/rakeshkumar1324}{\underline{linkedin.com/in/rakeshkumar1324}} $|$
+    \href{https://github.com/RakeshKumar132457}{\underline{github.com/RakeshKumar132457}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{
+    Innovative software engineer with expertise in web development and a strong ability to deliver efficient solutions. Proficient in collaboration, mentoring, and leveraging advanced technologies to optimize performance. Successfully led projects enhancing efficiency by 30\% and cutting response times by 25\%.
+}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Chandigarh University}{Punjab}
+{Bachelors of Engineering in Computer Science}{Aug. 2017 -- May 2021}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Software Engineer}{Dec. 2022 -- Present}
+{CarDekho}{Gurgaon}
+\resumeItemListStart
+\resumeItem{Directed the implementation of the PH environment using Nest.js and Fastify, delivering a scalable solution and boosting efficiency by 40\%}
+\resumeItem{Optimized notification queue management with GCP services like Pub/Sub and Cloud Scheduler, ensuring 95\% of notifications were delivered within 1 minute}
+\resumeItem{Elevated user engagement and system efficiency by 25\% through the use of BullMQ for notification queues}
+\resumeItem{Spearheaded the development of an advanced role assignment system, improving team responsiveness by 30\%}
+\resumeItem{Modernized legacy PHP code by transitioning to Node.js, achieving a 27\% improvement in system performance and stability}
+\resumeItem{Instituted a performance-based grading system, increasing workflow efficiency by 23\%}
+\resumeItem{Enhanced PDF generation services, reducing processing times by 25\% and significantly improving user experience}
+\resumeItem{Expedited the development and deployment of the Thailand product, achieving a 40\% faster delivery compared to previous projects}
+\resumeItemListEnd
+
+\resumeSubheading
+{Engineer}{Dec. 2021 -- Dec. 2022}
+{Mindtree}{Bengaluru}
+\resumeItemListStart
+\resumeItem{Created a hybrid automation framework using Java Selenium, automating 60\% of manual tasks and reducing testing time by 50\%}
+\resumeItem{Guided 10 interns on web development, resulting in successful project completions and skill enhancement}
+\resumeItem{Crafted secure forms with JavaScript validation, preventing 100\% of common vulnerabilities and ensuring 99.9\% data integrity}
+\resumeItem{Led the integration of 5+ RESTful APIs for third-party services, enhancing system interoperability and functionality by 60\%}
+\resumeItemListEnd
+
+\resumeSubheading
+{Trainee Engineer}{Sep. 2020 -- March 2021}
+{KloudGin}{Hyderabad}
+\resumeItemListStart
+\resumeItem{Integrated ArcGIS feature in Angular, visualizing maps 40\% faster and resolving queries 30\% quicker, enhancing user experience}
+\resumeItem{Authored Proof of Concepts using QuickSightSDK and agGrid, boosting customer interaction by 30\% and optimizing data retrieval for 1M records}
+\resumeItem{Devised and implemented an internal tool for AWS QuickSight using Java, streamlining dashboard generation and reducing manual effort by 50\%}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Natours} $|$ \emph{Node.js, Express, MongoDB, Pug, CSS3}}{}
+\resumeItemListStart
+\resumeItem{Engineered a robust tourism website using MVC architecture with Node.js and Express, leveraging MongoDB for efficient data modeling}
+\resumeItem{Implemented tour booking features and integrated payment gateway, enhancing user convenience and website functionality}
+\resumeItemListEnd
+\resumeProjectHeading
+{\textbf{Web Vulnerability Simulation} $|$ \emph{Angular, TypeScript, Angular Material UI}}{}
+\resumeItemListStart
+\resumeItem{Showcased and dissected OWASP's top 10 vulnerabilities in Angular, offering practical mitigation techniques}
+\resumeItem{Developed interactive tutorials and examples, providing a hands-on learning experience for users}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+          \textbf{Languages}{: JavaScript, TypeScript, C/C++, Python, Java} \\
+          \textbf{Web Development}{: Node.js, NestJS, Express.js, React.js, MySQL, Angular, MongoDB, Bootstrap, HTML/CSS, Sass} \\
+          \textbf{Frameworks/Tools}{: Selenium, ArcGIS, agGrid, Git, BurpSuite, Eclipse, VSCode}
+          }}
+\end{itemize}
+
+\end{document}
