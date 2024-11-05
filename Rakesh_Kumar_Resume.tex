@@ -1,177 +1,129 @@
-\documentclass[letterpaper,10.5pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\documentclass[a4paper,10pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{libertine}
-\input{glyphtounicode}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
 
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+% Define colors - lighter blue for background
+\definecolor{sectionblue}{RGB}{230,235,242}
+\definecolor{linkblue}{RGB}{0,0,255}
+\definecolor{textgray}{RGB}{70,70,70}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.6in}
-\addtolength{\textwidth}{1.2in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.3in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkblue,
+    linkcolor=linkblue
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+% Custom section style with light blue background - removed bold
+\newcommand{\customsection}[1]{%
+    \noindent\colorbox{sectionblue}{\makebox[\dimexpr\textwidth-2\fboxsep\relax][l]{\normalsize#1}}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set text color to gray
+\color{textgray}
 
 \begin{document}
 
-\begin{center}
-    \textbf{\Huge \scshape Rakesh Kumar} \\ \vspace{1pt}
-    \small +91-8209211601 $|$ \href{mailto:rakesh.kumar.132457@gmail.com}{\underline{rakesh.kumar.132457@gmail.com}} $|$
-    \href{https://linkedin.com/in/rakeshkumar1324}{\underline{linkedin.com/in/rakeshkumar1324}} $|$
-    \href{https://github.com/RakeshKumar132457}{\underline{github.com/RakeshKumar132457}}
-\end{center}
+% Header with adjusted spacing and alignment
+\noindent{\LARGE\textbf{Rakesh Kumar}}\hfill
+\href{https://linkedin.com/in/rakeshkumar1324}{LinkedIn} $|$
+\href{https://github.com/RakeshKumar132457}{GitHub} $|$
+\href{mailto:rakesh.kumar.132457@gmail.com}{rakesh.kumar.132457@gmail.com} $|$
++91-8209211601
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-\resumeSubHeadingListStart
+\vspace{1em}
 
-\resumeSubheading
-{Software Engineer}{Dec 2022 -- Present}
-{CarDekho}{Gurgaon}
-\resumeItemListStart
-\resumeItem{Contributed to a new NestJS and GraphQL project; spearheaded 3 key features end-to-end, including frontend UI, data modeling, and backend resolvers, adhering to PRD specifications and improving data retrieval efficiency by 25\% for 200+ daily users.}
-\resumeItem{Architected a flexible role-based access control system; designed database schema for roles and permissions, developed frontend module for role management, and established backend middleware for API validation, reducing unauthorized access attempts by 75\%.}
-\resumeItem{Devised a comprehensive target-setting and performance tracking system, integrating CSV uploads, real-time achievement visualization, and mobile notifications, resulting in a 30\% increase in user goal attainment.}
-\resumeItem{Crafted a PDF microservice with customizable templates and data injection; reduced generation time from 15-20 seconds to under 5 seconds, supporting 13,700+ monthly reports, invoices, and forms across multiple services.}
-\resumeItem{Developed a role-based form system for dealership visits, featuring customizable questions and instant dealer acknowledgment, reducing form completion time from hours to 4-5 minutes and eliminating data loss.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Engineer}{Dec 2021 -- Dec 2022}
-{Mindtree}{Bengaluru}
-\resumeItemListStart
-\resumeItem{Constructed comprehensive test automation framework; incorporated page object model, data-driven testing, and parallel execution, resulting in 61\% task automation and 48\% faster testing cycles.}
-\resumeItem{Managed development and maintenance of client-specific RESTful APIs; enhanced system reliability and error handling, improving overall functionality by 59\% and ensuring adherence to diverse client requirements.}
-\resumeItem{Executed comprehensive security measures across API endpoints and frontend; leveraged open-source vulnerability scanners and internal tools to conduct audits, mitigating 97\% of common vulnerabilities and enhancing overall application security.}
-\resumeItem{Co-led a team of 20 interns with one other mentor; designed and conducted full-stack training program covering Node.js, MySQL, and React, resulting in 80\% conversion rate to full-time positions, significantly above company average.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Trainee Engineer}{Sep 2020 -- Mar 2021}
-{KloudGin}{Hyderabad}
-\resumeItemListStart
-\resumeItem{Integrated ArcGIS feature in Angular; refined map rendering and devised custom controls, achieving 39\% faster visualization and 28\% quicker queries for 10,000+ daily active users.}
-\resumeItem{Created a Java-based tool interfacing with AWS CLI for QuickSight; automated report generation and dashboard creation, streamlining BI workflow and reducing end-to-end process time by 46\%.}
-\resumeItem{Optimized advanced features in agGrid; enhanced rendering for 1M+ records, resulting in 27\% faster data loading times and enabling custom filtering and export options.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-%-----------KEY PROJECTS-----------
-\section{Key Projects}
-\resumeSubHeadingListStart
-
-\resumeProjectHeading
-{\textbf{Journey} $|$ \emph{Node.js, Express, React, MySQL, MongoDB}}{}
-\resumeItemListStart
-\resumeItem{Architected a sophisticated multi-tier evaluation system for 40,000+ financial agents, integrating configurable performance metrics and automated grading algorithms.}
-\resumeItem{Established a 5-tier hierarchical approval workflow, reducing evaluation time by 80\%, significantly improving process efficiency.}
-\resumeItem{Streamlined final approval process, reducing processing time by 95\% and eliminating manual data transfer errors.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\textbf{Notification Module} $|$ \emph{Node.js, React, Google Pub/Sub, Cloud Scheduler, MySQL}}{}
-\resumeItemListStart
-\resumeItem{Engineered a flexible notification system with customizable types, frequency, and duration, improving user engagement by 37\%.}
-\resumeItem{Deployed robust user targeting via CSV uploads and business line/role filters, enabling precise communication to 50+ user segments.}
-\resumeItem{Leveraged Google Pub/Sub and Cloud Scheduler for efficient notification processing, achieving 97\% delivery within 3 minutes during peak loads without system degradation.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\textbf{Web Security Assessment Platform} $|$ \emph{Angular, TypeScript, Node.js, Express}}{}
-\resumeItemListStart
-\resumeItem{Conceptualized and built an interactive platform showcasing OWASP Top 10 vulnerabilities with hands-on exercises.}
-\resumeItem{Synthesized real-world scenarios into practical learning modules, garnering a 4.7/5 average rating from 150+ participants.}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-          \textbf{Languages}: JavaScript (ES6+), TypeScript, Python, Java, C/C++, SQL \\
-          \textbf{Frontend}: React, Angular, HTML5, CSS3, SCSS, Tailwind, Bootstrap \\
-          \textbf{Backend}: Node.js, Express.js, NestJS, Django, GraphQL \\
-          \textbf{Databases}: MongoDB, MySQL, PostgreSQL, Redis \\
-          \textbf{Cloud \& DevOps}: AWS (EC2, S3, QuickSight), GCP (Pub/Sub, Cloud Scheduler), Jenkins \\
-          \textbf{Testing}: Jest, Selenium, JUnit \\
-          \textbf{Tools \& Methodologies}: Git, JIRA, RESTful APIs, GraphQL, Microservices, Agile/Scrum, TDD
-          }}
+\customsection{SUMMARY}
+\begin{itemize}[leftmargin=*,nosep]
+    \item Full Stack Developer with 3.4 years of experience in developing scalable web applications
+    \item Expertise in JavaScript/TypeScript ecosystem with focus on Node.js and React
+    \item Track record of delivering high-impact features improving system efficiency by 25-75\%
 \end{itemize}
+\vspace{1em}
 
-%-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Chandigarh University}{Punjab, India}
-{Bachelor of Engineering in Computer Science}{Aug 2017 -- May 2021}
-\resumeItemListStart
-\resumeItem{Developed an AI-powered assistant using Python, integrating Wolfram Alpha and Wikipedia APIs; implemented natural language processing for query interpretation, achieving 87\% accuracy in providing relevant information across diverse topics.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+\customsection{FUNCTIONAL AREAS}
+\vspace{0.5em}
+{\small
+    \begin{tabular}{@{\textbullet\hspace{1em}}l@{\hspace{4em}}@{\textbullet\hspace{1em}}l@{\hspace{4em}}@{\textbullet\hspace{1em}}l}
+        Full Stack Development & System Architecture & Performance Optimization \\[0.5em]
+        API Development        & Database Design     & Technical Leadership
+    \end{tabular}
+}
+\vspace{1em}
 
+\customsection{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=*,nosep]
+    \item \textbf{Languages:} JavaScript (ES6+), TypeScript, Python, Java, C/C++, SQL
+    \item \textbf{Frontend:} React, Angular, HTML5, CSS3, SCSS, Tailwind, Bootstrap
+    \item \textbf{Backend:} Node.js, Express.js, NestJS, Django, GraphQL
+    \item \textbf{Databases:} MongoDB, MySQL, PostgreSQL, Redis
+    \item \textbf{Cloud \& DevOps:} AWS (EC2, S3, QuickSight), GCP (Pub/Sub, Cloud Scheduler), Jenkins
+    \item \textbf{Testing:} Jest, Selenium, JUnit
+    \item \textbf{Tools \& Methodologies:} Git, JIRA, RESTful APIs, GraphQL, Microservices, Agile/Scrum, TDD
+\end{itemize}
+\vspace{1em}
+
+\customsection{PROFESSIONAL EXPERIENCE}
+\begin{itemize}[leftmargin=*,nosep]
+    \item \textbf{CarDekho, Gurgaon} \hfill \textbf{Dec 2022 – Present}
+          \\{\textit{Software Engineer}}
+          \begin{itemize}[nosep]
+              \item Architected NestJS/GraphQL features with efficient data modeling, improving retrieval speed by 25\% for 200+ daily users
+              \item Engineered role-based access system with custom middleware, reducing unauthorized access by 75\% across modules
+              \item Orchestrated performance tracking system integrating CSV uploads and real-time visualization, boosting goal attainment by 30\%
+              \item Developed scalable PDF microservice with dynamic templates, reducing generation time to 5 seconds for 13,700+ reports
+              \item Crafted mobile-responsive dealership form system with instant acknowledgment, cutting completion time to 4-5 minutes
+          \end{itemize}
+          \vspace{0.5em}
+
+    \item \textbf{Mindtree, Bengaluru} \hfill \textbf{Dec 2021 – Dec 2022}
+          \\{\textit{Engineer}}
+          \begin{itemize}[nosep]
+              \item Spearheaded test automation framework with parallel execution capabilities, achieving 61\% automation and 48\% faster cycles
+              \item Optimized RESTful APIs with comprehensive error handling, improving functionality by 59\% across client integrations
+              \item Established security protocols using vulnerability scanners, mitigating 97\% of common security threats
+              \item Mentored 20-intern full-stack development program covering Node.js ecosystem, achieving 80\% conversion rate
+          \end{itemize}
+          \vspace{0.5em}
+
+    \item \textbf{KloudGin, Hyderabad} \hfill \textbf{Sep 2020 – Mar 2021}
+          \\{\textit{Trainee Engineer}}
+          \begin{itemize}[nosep]
+              \item Integrated ArcGIS features with custom map controls, delivering 39\% faster visualization for 10,000+ daily users
+              \item Designed Java-based AWS QuickSight automation tool, streamlining report generation workflow by 46\%
+              \item Refined agGrid implementation with advanced features, accelerating data loading by 27\% for 1M+ records
+          \end{itemize}
+\end{itemize}
+\vspace{1em}
+
+\customsection{KEY PROJECTS}
+\begin{itemize}[leftmargin=*,nosep]
+    \item {\textbf{Journey}} $|$ \textit{Node.js, Express, React, MySQL, MongoDB}
+          \begin{itemize}[nosep]
+              \item Architected multi-tier evaluation system with configurable performance metrics for 40,000+ financial agents
+              \item Designed hierarchical approval workflow with automated validation, reducing evaluation time by 80\%
+              \item Streamlined final approval process with real-time updates, cutting processing time by 95\%
+          \end{itemize}
+          \vspace{0.5em}
+
+    \item {\textbf{Notification Module}} $|$ \textit{Node.js, React, Google Pub/Sub, Cloud Scheduler}
+          \begin{itemize}[nosep]
+              \item Constructed flexible notification system with customizable parameters, enhancing user engagement by 37\%
+              \item Established precise targeting mechanism with CSV uploads, enabling communication across 50+ user segments
+              \item Leveraged Google Pub/Sub for efficient message processing, achieving 97\% delivery within 3 minutes
+          \end{itemize}
+\end{itemize}
+\vspace{1em}
+
+\customsection{EDUCATION}
+\begin{itemize}[leftmargin=*,nosep]
+    \item \textbf{Chandigarh University} \hfill \textbf{Punjab, India}
+    \item Bachelor of Engineering in Computer Science \hfill \textit{Aug 2017 – May 2021}
+\end{itemize}
 
 \end{document}
