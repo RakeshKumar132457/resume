@@ -1,0 +1,142 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[]{awesome-cv}
+\usepackage{textcomp}
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-red}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+    \begin{document}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Profile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+	\headerfirstnamestyle{Rakesh} \headerlastnamestyle{Kumar} \\
+	\vspace{2mm}
+	{\faEnvelope\ rakesh.kumar.132457@gmail.com} | {\faMobile\ 8209211601} | {\faLink\ https://www.linkedin.com/in/rakeshkumar1324}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Experience}
+\begin{cventries}
+	\cventry
+	{Software Engineer}
+	{CarDekho}
+	{Gurgaon}
+	{Dec 2022 – Present}
+	{\begin{cvitems}
+		\item {Led development of new UCRF system using NestJS and GraphQL; architected end-to-end loan processing workflow and implemented performance optimizations through query optimization and codebase cleanup, achieving 25\% faster data retrieval and successfully processing 100+ monthly applications in the newly launched Philippines market.}
+		\item {Designed and implemented enterprise-wide role-based access control system; architected database schema for hierarchical roles, developed admin dashboard, and established secure refresh token mechanism with granular permission controls, protecting sensitive data access for 100+ users across 5+ admin role types.}
+		\item {Engineered target tracking system integrating agentbox service for 30,000+ agents; developed CSV-based target upload functionality, real-time achievement visualization, and mobile-first APIs, driving 30\% increase in agent goal attainment and improving performance tracking visibility across organizational hierarchy.}
+		\item {Architected high-performance PDF microservice using puppeteer; implemented template management system handling 100+ dynamic templates across services, reducing generation time from 15-20 seconds to under 3 seconds with peak performance of 5 seconds, supporting 13,700+ monthly documents including commitment forms and invoices.}
+		\item {Developed dynamic dealer visit management system with role-based forms; implemented MTD/LMTD disbursal-based question generation and dealer acknowledgment workflow, processing thousands of monthly visits while reducing form completion time from hours to 4-5 minutes and establishing systematic feedback collection mechanism.}
+		\end{cvitems}}
+	\cventry
+	{Engineer}
+	{Mindtree}
+	{Bengaluru}
+	{Dec 2021 – Dec 2022}
+	{\begin{cvitems}
+		\item {Constructed comprehensive test automation framework; incorporated page object model, data-driven testing, and parallel execution, automating 583 test cases and reducing average test cycle duration from 4.5 hours to 2.3 hours.}
+		\item {Managed development and maintenance of client-specific RESTful APIs; enhanced system reliability through improved error handling and logging, reducing critical production incidents by 68\% and achieving 99.96\% uptime across 42 endpoints.}
+		\item {Executed comprehensive security measures across API endpoints and frontend; identified and resolved 47 high-priority vulnerabilities, reducing the application\textquotesingle{}s security risk score from 7.8 to 2.3 based on internal security metrics.}
+		\item {Co-led a team of 20 interns with one other mentor; designed and conducted 12-week full-stack training program covering Node.js, MySQL, and React, achieving 16/20 conversion rate to full-time positions, significantly above company average of 55\%.}
+		\end{cvitems}}
+	\cventry
+	{Trainee Engineer}
+	{KloudGin}
+	{Hyderabad}
+	{Sep 2020 – Mar 2021}
+	{\begin{cvitems}
+		\item {Integrated ArcGIS feature in Angular; refined map rendering and devised custom controls, reducing average map load time from 3.2s to 1.9s and improving spatial query response time by 31\% for regional user base of 2,800+ daily active users.}
+		\item {Created Java-based tool interfacing with AWS CLI for QuickSight; automated report generation and dashboard creation, reducing manual configuration time from 45 minutes to 13 minutes per dashboard while maintaining 99.2\% data accuracy.}
+		\item {Optimized advanced features in agGrid; enhanced rendering for datasets exceeding 1M records, achieving 32\% improvement in initial load time and implementing custom filtering logic that reduced memory usage by 43\% during export operations.}
+		\end{cvitems}}
+\end{cventries}
+\cvsection{Key Projects}
+\begin{cventries}
+	\cventry
+	{Architected a sophisticated multi-tier evaluation system for 40,000+ financial agents; implemented configurable performance metrics tracking across 8 KPIs and automated grading algorithms with real-time data synchronization.}
+	{Journey}
+	{Nodejs}
+	{}
+	{}
+	
+	\vspace{-5mm}
+	\cventry
+	{Engineered a flexible notification system with customizable types, frequency, and duration, improving user engagement by 37\%.}
+	{Notification Module}
+	{Nodejs, Express}
+	{}
+	{}
+	
+	\vspace{-5mm}
+\end{cventries}
+\cvsection{Technical Skills}
+\begin{cventries}
+	\cventry
+	{}
+	{\def\arraystretch{1.15}{\begin{tabular}{ l l }
+		Languages:  & {\skill{ JavaScript (ES6+), TypeScript}} \\
+		Frontend:  & {\skill{ React, Angular}} \\
+		\end{tabular}}}
+	{}
+	{}
+	{}
+\end{cventries}
+
+\vspace{-7mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Education}
+\begin{cventries}
+	\cventry
+	{Bachelor of Engineering in Computer Science}
+	{Chandigarh University}
+	{Punjab, India}
+	{Aug 2017 – May 2021}
+	{}
+\end{cventries}
+
+\vspace{-2mm}
+
+\ 
+\end{document}
